@@ -1,0 +1,2 @@
+select b.Title from BOOK b join BOOK_ISSUE i on e.Book_Id=i.Book_Id where status ='IN';
+select m.Name from BOOK_ISSUE i join Member m on m.Member_Id=i.Member where Book_Id=(select Book_Id from BOOK where Language_Id =(select Language_Id from Language where Name ='Malayalam'));
